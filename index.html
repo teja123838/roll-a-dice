@@ -1,0 +1,57 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Roll a Dice</title>
+
+    <style>
+        body {
+            background-color:purple;
+            background-image: url(https://thumbs.dreamstime.com/b/red-dice-wooden-surface-two-focus-blurred-bokeh-lights-creating-dynamic-playful-atmosphere-354382848.jpg?w=992);
+            background-repeat:no-repeat;
+
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 200px;
+            color:rgb(47, 189, 255);
+        } 
+
+        #dice {
+            font-size: 100px;
+            margin: 30px;
+            color:rgb(43, 226, 89);
+        }
+
+        button {
+            background-color: rgb(166, 255, 0);
+            padding: 12px 25px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>🎲 Roll a Dice</h1>
+
+    <div id="dice">⚀</div>
+
+    <button onclick="rollDice()">Roll Dice</button>
+
+    <p id="result">click the button to roll the dice.</p>
+    <image="https://www.dreamstime.com/red-dice-wooden-surface-two-focus-blurred-bokeh-lights-creating-dynamic-playful-atmosphere-image354382848"></image>
+    
+
+    <script>
+        function rollDice() {
+            let number = Math.floor(Math.random() * 6) + 1;
+
+            let diceFaces = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+
+            document.getElementById("dice").innerHTML = diceFaces[number - 1];
+        }
+    </script>
+
+</body>
+</html>
